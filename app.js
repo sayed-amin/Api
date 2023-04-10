@@ -5,10 +5,10 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 const dbConfig = {
-  host: 'amin.mysql.database.azure.com',
-  user: 'amin',
-  password: 'Qwerty@111',
-  database: 'train',
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
   ssl: {
     rejectUnauthorized: true
   }
